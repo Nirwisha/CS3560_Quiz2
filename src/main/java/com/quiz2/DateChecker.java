@@ -2,7 +2,7 @@ package com.quiz2;
 
 public class DateChecker {
     
-    enum Month {
+    public enum Month {
         JANUARY,
         FEBRUARY,
         MARCH,
