@@ -1,0 +1,2 @@
+### Reflection of TDD Process
+It was very interesting having to write unit tests before the actual production code. I don't use tests as often as I should, but whenever I do, it's often after I've written everything. I test it, and then find out it isn't behaving as I want it to. It wastes a lot of time having to go back and rework everything or trying to find where the problem is. Doing it this way, where we check the code much more frequently, makes any errors easy to catch and fix.
