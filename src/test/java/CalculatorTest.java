@@ -1,6 +1,7 @@
 import com.quiz2.Calculator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test; //used for annotation
 
@@ -44,5 +45,11 @@ public class CalculatorTest {
         boolean expected = true;
         boolean actual = calculator.isEven(2);    //expecting true
         assertEquals(expected, actual);
+    }
+
+    //trying to divide by 0 -> throws IllegalArgumentException
+    @Test 
+    public void testDivideByZero() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> calculator.divide(1,0));
     }
 }
