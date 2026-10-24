@@ -2,6 +2,7 @@ import com.quiz2.DateChecker;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -47,6 +48,15 @@ public class DateCheckerTest {
         boolean expected = false;
         boolean actual = dateChecker.has31Days(DateChecker.Month.FEBRUARY);        //should be false
         assertEquals(expected, actual);
+    }
+
+    //test for null month
+    @Test
+    public void testNullMonthThrowsException() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> dateChecker.has31Days(null));
+        String expectedMessage = "Month input cannot be null";
+        String actualMessage = exception.getMessage();
+        assertEquals(expectedMessage, actualMessage);
     }
 
 }

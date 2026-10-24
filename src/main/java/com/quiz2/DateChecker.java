@@ -22,7 +22,10 @@ public class DateChecker {
     private DateChecker.Month[] monthThirtyOneDays = {Month.JANUARY, Month.MARCH, Month.MAY, Month.JULY, Month.AUGUST, Month.OCTOBER, Month.DECEMBER};
 
     public boolean has31Days(Month month) {
-       if (Arrays.asList(monthThirtyOneDays).contains(month)) {
+       if (month == null) {
+        throw new IllegalArgumentException("Month input cannot be null");
+       }
+       else if (Arrays.asList(monthThirtyOneDays).contains(month)) {
         return true;
        }
        else {
