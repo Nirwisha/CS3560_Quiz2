@@ -13,8 +13,8 @@ public class CalculatorTest {
     public void testSum() {
         
         //if values passed in assertEquals match -> pass, if not -> fail
-        int expected = -1;
-        int actual = 2;
+        int expected = 3;
+        int actual = calculator.sum(1, 2);      //1+2 = 3
         assertEquals(expected, actual);
     }
 }
