@@ -55,4 +55,34 @@ public class CalculatorTest {
         String actualMessage = exception.getMessage();
         assertEquals(expectedMessage, actualMessage);
     }
+
+    //more cases/tests
+    @Test
+    public void testSum2() {
+        int expected = -19;
+        int actual = calculator.sum(-11, -8);      //-11+(-8) = -19
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSubtract2() {
+        int expected = 7;
+        int actual = calculator.subtract(7,0);      //7-0 = 7
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testMultiply2() {
+        int expected = 15;
+        int actual = calculator.multiply(-5, -3);      //-5*-3 = 15
+        assertEquals(expected, actual);
+    }
+
+    @Test 
+    public void testIsOdd() {
+        boolean expected = false;
+        boolean actual = calculator.isEven(3);    //expecting false
+        assertEquals(expected, actual);
+    }
+
 }
